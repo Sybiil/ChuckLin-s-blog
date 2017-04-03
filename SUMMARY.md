@@ -7,8 +7,20 @@
   * [Jdk8 supportted DateUtil](java/Jdk8 supportted DateUtil.md)
   * [Redis-Jedis简易操作指南](java/Redis-Jedis简易操作指南.md)
   * [也谈谈容器与迭代器](java/也谈谈容器与迭代器.md)
-
+  * [使用XStream序列化XML数据](java/使用XStream序列化XML数据.md)
+  * [入门AQS锁 - Condition与LockSupport](java/入门AQS锁 - Condition与LockSupport.md)
+  * [入门AQS锁 - CountDownLatch](java/入门AQS锁 - CountDownLatch.md)
+  * [入门AQS锁 - CyclicBarrier](java/入门AQS锁 - CyclicBarrier.md)
+  * [入门AQS锁 - ReadLock与WriteLock](java/入门AQS锁 - ReadLock与WriteLock.md)
+  * [入门AQS锁 - ReentrantLock与Condition](java/入门AQS锁 - ReentrantLock与Condition.md)
+  * [入门AQS锁 - Semaphore](java/入门AQS锁 - Semaphore.md)
+  * [实用泛型说明](java/实用泛型说明.md)
+  * [死锁是什么？如何避免死锁？](java/死锁是什么？如何避免死锁？.md)
 * [python](python.md)
   * [python/Python3.x、urllib、与HTTPCookieProcessor趣事.md](python/Python3.x、urllib、与HTTPCookieProcessor趣事.md)
   * [python/基于python3的简单网络爬虫示例.md](python/基于python3的简单网络爬虫示例.md)
+* [linux](linux.md)
+  * [vsftpDaemon搭建问题手册](linux/vsftpDaemon搭建问题手册.md)
+  * [在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题](linux/在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题.md)
+
 
