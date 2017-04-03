@@ -22,5 +22,8 @@
 * [linux](linux.md)
   * [vsftpDaemon搭建问题手册](linux/vsftpDaemon搭建问题手册.md)
   * [在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题](linux/在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题.md)
-
+*[计算机原理](计算机原理.md)
+  * [通俗易懂的解释HTTPS](计算机原理/通俗易懂的解释HTTPS.md)
+*[设计模式](设计模式.md)
+  * []
 
