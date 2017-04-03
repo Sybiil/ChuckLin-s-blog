@@ -1,7 +1,5 @@
 # 在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题
 
-标签（空格分隔）： linux
-
 ---
 
 ##什么是 SElinux
