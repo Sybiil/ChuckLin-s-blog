@@ -6,22 +6,16 @@
 在介绍常见的针对 web 应用的攻击手法之前，我们先复习一下下面这些与 web 安全息息相关的知识点。理解掌握这些知识点，是进一步学习 web 安全的基础。
 
 ##跨域
-当一个资源请求一个其它域名或者另外一个端口的资源时会产生一个跨域 HTTP 请求(cross-origin HTTP request)。比如说，http://domaina.example 的某HTML页面通过 <img> 的 src 请求 http://domainb.foo/image.jpg。在当今的 Web 开发中，许多页面都会从另外一个站点加载各类资源（包括CSS、图片、JavaScript 脚本以及其它类资源）。
+当一个资源请求一个其它域名或者另外一个端口的资源时会产生一个跨域 HTTP 请求(cross-origin HTTP request)。比如说，http://domaina.example 的某HTML页面通过 ```<img>``` 的 src 请求 http://domainb.foo/image.jpg。在当今的 Web 开发中，许多页面都会从另外一个站点加载各类资源（包括CSS、图片、JavaScript 脚本以及其它类资源）。
 针对不同的来源的各类资源的交互，各大浏览器往往遵循**同源策略**，对交互进行处理。
 
 ##同源策略
 同源策略限制从一个源加载的文档或脚本如何与来自另一个源的资源进行交互。如果协议，端口（如果指定了一个）和主机对于两个页面是相同的，则两个页面具有相同的源。
 下表给出了相对 http://store.company.com/dir/page.html 同源检测的示例:
-| URL        | 结果   |  原因 |
-| --------   | -----:  | :----:  |
-| http://store.company.com/dir2/other.html     | 成功 |   dir2/other.html     |
-| http://store.company.com/dir/inner/another.html        |   成功   |   dir/inner/another.html   |
-| https://store.company.com/secure.html        |    失败    |  不同的协议 ( https )  |
-| http://store.company.com:81/dir/etc.html|失败|不同的端口 ( 81 )|
-| http://news.company.com/dir/other.html|失败|不同的主机（主机）|
+![](/assets/屏幕快照 2017-04-03 下午11.10.26.png)
 
 ###常见跨源网络访问
-同源策略控制了不同源之间的交互，例如在使用 XMLHttpRequest 或 <img> 标签时则会受到同源策略的约束。交互通常分为三类：
+同源策略控制了不同源之间的交互，例如在使用 XMLHttpRequest 或 ```<img>``` 标签时则会受到同源策略的约束。交互通常分为三类：
 
 - 通常允许进行跨域写操作（Cross-origin writes）。例如链接（links），重定向以及表单提交。特定少数的HTTP请求需要添加 preflight。
 - 通常允许跨域资源嵌入（Cross-origin embedding）。之后下面会举例说明。
