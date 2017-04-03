@@ -1,7 +1,5 @@
 # vsftpDaemon搭建问题手册
 
-标签（空格分隔）： linux
-
 ---
 
 ##VSFTPD是什么
