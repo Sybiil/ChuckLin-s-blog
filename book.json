@@ -21,7 +21,13 @@
         "tbfed-pagefooter",
         "anchor-navigation-ex",
         "anchors",
-        "disqus"
+        "disqus",
+        "sectionx",
+        "emphasize",
+        "github",
+        "-lunr", "-search", "search-plus",
+        "advanced-emoji",
+        "todo"
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {
@@ -48,6 +54,12 @@
         },
         "disqus": {
             "shortName": "gitbookuse"
+        },
+        "sectionx": {
+            "tag": "b"
+        },
+        "github": {
+            "url": "https://github.com/mikumikulch"
         }
     }
 }
