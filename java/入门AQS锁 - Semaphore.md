@@ -1,6 +1,5 @@
 # 入门AQS锁 - Semaphore
 
-标签（空格分隔）： java
 
 ---
 

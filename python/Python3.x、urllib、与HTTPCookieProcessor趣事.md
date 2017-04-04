@@ -1,6 +1,5 @@
 # Python3.x、urllib、与HTTPCookieProcessor趣事
 
-标签（空格分隔）： python
 
 ---
 
