@@ -30,11 +30,21 @@
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
         "anchor-navigation-ex": {
-                "isRewritePageTitle": true,
-                "isShowTocTitleIcon": true,
-                "tocLevel1Icon": "fa fa-hand-o-right",
-                "tocLevel2Icon": "fa fa-hand-o-right",
-                "tocLevel3Icon": "fa fa-hand-o-right"
+                "showLevel": true,
+                "associatedWithSummary": true,
+                "mode": "float",
+                "float": {
+                    "showLevelIcon": false,
+                    "level1Icon": "fa fa-hand-o-right",
+                    "level2Icon": "fa fa-hand-o-right",
+                    "level3Icon": "fa fa-hand-o-right"
+                },
+                "pageTop": {
+                    "showLevelIcon": false,
+                    "level1Icon": "fa fa-hand-o-right",
+                    "level2Icon": "fa fa-hand-o-right",
+                    "level3Icon": "fa fa-hand-o-right"
+                }
         },
         "disqus": {
             "shortName": "gitbookuse"
