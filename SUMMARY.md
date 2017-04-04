@@ -28,7 +28,7 @@
   * [在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题](linux/在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题.md)
 * [计算机原理](章节/计算机原理.md)
   * [通俗易懂的解释HTTPS](计算机原理/通俗易懂的解释HTTPS.md)
-* [设计模式](设计模式.md)
+* [设计模式](章节/设计模式.md)
   * [策略设计模式](设计模式/策略设计模式.md)
   * [单例设计模式](设计模式/单例设计模式.md)
   * [工厂设计模式](设计模式/工厂设计模式.md)
@@ -40,7 +40,7 @@
   * [原型设计模式](设计模式/原型设计模式.md)
   * [装饰器设计模式](设计模式/装饰器设计模式.md)
   * [状态设计模式](设计模式/状态设计模式.md)
-* [python](章节python.md)
+* [python](章节/python.md)
   * [Python3.x、urllib、与HTTPCookieProcessor趣事](python/Python3.x、urllib、与HTTPCookieProcessor趣事.md)
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
 
