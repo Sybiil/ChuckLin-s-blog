@@ -1,26 +1,28 @@
-"plugins": [
-    "splitter",
-    "expandable-chapters-small",
-    "tbfed-pagefooter",
-    "donate",
-    "anchors",
-    "anchor-navigation-ex",
-    "disqus"
-],
-"pluginsConfig": {
-    "tbfed-pagefooter": {
-        "copyright":"Copyright &copy chuck Lin 2017",
-        "modify_label": "该文件修订时间：",
-        "modify_format": "YYYY-MM-DD HH:mm:ss"
-    },
-    "anchor-navigation-ex": {
-            "isRewritePageTitle": true,
-            "isShowTocTitleIcon": true,
-            "tocLevel1Icon": "fa fa-hand-o-right",
-            "tocLevel2Icon": "fa fa-hand-o-right",
-            "tocLevel3Icon": "fa fa-hand-o-right"
-    },
-    "disqus": {
-        "shortName": "gitbookuse"
+{
+    "plugins": [
+        "splitter",
+        "expandable-chapters-small",
+        "tbfed-pagefooter",
+        "donate",
+        "anchors",
+        "anchor-navigation-ex",
+        "disqus"
+    ],
+    "pluginsConfig": {
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy chuck Lin 2017",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "anchor-navigation-ex": {
+                "isRewritePageTitle": true,
+                "isShowTocTitleIcon": true,
+                "tocLevel1Icon": "fa fa-hand-o-right",
+                "tocLevel2Icon": "fa fa-hand-o-right",
+                "tocLevel3Icon": "fa fa-hand-o-right"
+        },
+        "disqus": {
+            "shortName": "gitbookuse"
+        }
     }
 }
