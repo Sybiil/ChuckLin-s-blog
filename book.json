@@ -26,8 +26,9 @@
         "emphasize",
         "github",
         "-lunr", "-search", "search-plus",
-        "advanced-emoji",
-        "todo"
+        "todo",
+        "advanced-emoji"
+        
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {
