@@ -1,8 +1,8 @@
 # Summary
 
-* #[Introduction](README.md)
+* [Introduction](README.md)
 * [【转载】中文技术文档的写作规范](【转载】中文技术文档的写作规范.md)
-* #[java](章节/java.md)
+* [java](章节/java.md)
   * [java 中内部类到底有什么用](java/Java 中内部类到底有什么用.md)
   * [Jdk8 suportted JacksonUtil](java/Jdk8 suportted JacksonUtil.md)
   * [Jdk8 supportted DateUtil](java/Jdk8 supportted DateUtil.md)
@@ -26,9 +26,9 @@
 * [linux](章节/linux.md)
   * [vsftpDaemon搭建问题手册](linux/vsftpDaemon搭建问题手册.md)
   * [在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题](linux/在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题.md)
-* #[计算机原理](章节/计算机原理.md)
+* [计算机原理](章节/计算机原理.md)
   * [通俗易懂的解释HTTPS](计算机原理/通俗易懂的解释HTTPS.md)
-* #[设计模式](章节/设计模式.md)
+* [设计模式](章节/设计模式.md)
   * [策略设计模式](设计模式/策略设计模式.md)
   * [单例设计模式](设计模式/单例设计模式.md)
   * [工厂设计模式](设计模式/工厂设计模式.md)
@@ -40,7 +40,7 @@
   * [原型设计模式](设计模式/原型设计模式.md)
   * [装饰器设计模式](设计模式/装饰器设计模式.md)
   * [状态设计模式](设计模式/状态设计模式.md)
-* #[python](章节/python.md)
+* [python](章节/python.md)
   * [Python3.x、urllib、与HTTPCookieProcessor趣事](python/Python3.x、urllib、与HTTPCookieProcessor趣事.md)
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
 
