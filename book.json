@@ -30,7 +30,7 @@
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
         "anchor-navigation-ex": {
-                "showLevel": true,
+                "showLevel": false,
                 "associatedWithSummary": true,
                 "mode": "float",
                 "float": {
