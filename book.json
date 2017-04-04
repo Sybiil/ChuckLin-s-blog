@@ -1,4 +1,6 @@
 {
+    "author": "Chuck Lin <mikumiku.lch@hotmail.com>",
+    "description": "给大家添麻烦了",
     "plugins": [
         "splitter",
         "expandable-chapters-small",
