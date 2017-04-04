@@ -27,8 +27,8 @@
         "github",
         "-lunr", "-search", "search-plus",
         "todo",
-        "advanced-emoji"
-        
+        "advanced-emoji",
+        "theme-comscore"
     ],
     "pluginsConfig": {
         "tbfed-pagefooter": {

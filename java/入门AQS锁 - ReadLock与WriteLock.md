@@ -1,7 +1,5 @@
 # 入门AQS锁 - ReadLock与WriteLock
 
-标签（空格分隔）： java
-
 ---
 
 1. WriteLock(写入锁)。

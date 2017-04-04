@@ -1,7 +1,5 @@
 # 使用XStream序列化XML数据
 
-标签（空格分隔）： java
-
 ---
 
 ##Xstream是什么？它有什么用？

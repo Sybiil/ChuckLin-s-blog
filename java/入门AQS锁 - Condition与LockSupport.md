@@ -1,7 +1,5 @@
 # 入门AQS锁 - Condition与LockSupport
 
-标签（空格分隔）： java
-
 ---
 
 在[第一章节](https://www.zybuluo.com/mikumikulch/note/268244)中，我们已经初步接触了ReentrantLock独占锁与Condition接口，并且学习了ReentrantLock与Synchronized关键字的联系与区别，以及Condition接口中3个比较重要的方法的含义与用法。

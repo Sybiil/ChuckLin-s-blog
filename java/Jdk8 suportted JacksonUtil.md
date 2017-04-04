@@ -1,7 +1,5 @@
 # Jdk8 suportted JacksonUtil
 
-标签（空格分隔）： java
-
 ---
 ##XML、JSON 处理的烦恼
 java中处理json与xml数据时，有各种各样的第三方库供用户选择。其中具有代表性的有 Gson、FastJson、Jackson、Json-lib、xstream、jaxb 等等。

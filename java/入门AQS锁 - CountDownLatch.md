@@ -1,7 +1,5 @@
 # 入门AQS锁 - CountDownLatch    
 
-标签（空格分隔）： java 
-
 ---
 
 如果你还记得前一章[可重入共享锁](https://www.zybuluo.com/mikumikulch/note/273442 ) 的知识，并且掌握的还算不错的话，那么CountDownLatch会非常容易理解。

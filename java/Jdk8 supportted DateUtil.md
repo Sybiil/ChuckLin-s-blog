@@ -1,6 +1,5 @@
 # Jdk8 supportted DateUtil
 
-标签（空格分隔）： java
 
 ---
 

@@ -1,7 +1,5 @@
 # 入门AQS锁 - CyclicBarrier
 
-标签（空格分隔）： java
-
 ---
 
 在本章节内容开始之前，先让我们来回忆一下[CountDownLatch](https://www.zybuluo.com/mikumikulch/note/273442 ) 的定义，再与CyclicBarrier的定义进行比较，明确他们之间的区别。
