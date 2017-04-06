@@ -15,6 +15,7 @@
   * [入门AQS锁 - ReadLock与WriteLock](java/入门AQS锁 - ReadLock与WriteLock.md)
   * [入门AQS锁 - ReentrantLock与Condition](java/入门AQS锁 - ReentrantLock与Condition.md)
   * [入门AQS锁 - Semaphore](java/入门AQS锁 - Semaphore.md)
+  * [深入 DelayQueue 内部实现](shen-ru-delayqueue-nei-bu-shi-xian.md)
   * [实用泛型说明](java/实用泛型说明.md)
   * [死锁是什么？如何避免死锁？](java/死锁是什么？如何避免死锁？.md)
 * [web应用安全](章节/web安全.md)
@@ -43,5 +44,4 @@
 * [python](章节/python.md)
   * [Python3.x、urllib、与HTTPCookieProcessor趣事](python/Python3.x、urllib、与HTTPCookieProcessor趣事.md)
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
-
 
