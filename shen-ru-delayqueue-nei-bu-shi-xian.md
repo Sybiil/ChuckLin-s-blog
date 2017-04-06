@@ -152,7 +152,7 @@ DelayTask{delay=5000, expire=1491388091235, msg='Task5', now=1491388086235}
 ##DelayQueue 实现原理
 理解 DelayQueue 实现原理最好的办法是从 take方法与 add 方法入手。
 ###take
-```
+```java
 /**
      * Retrieves and removes the head of this queue, waiting if necessary
      * until an element with an expired delay is available on this queue.
@@ -205,7 +205,7 @@ DelayTask{delay=5000, expire=1491388091235, msg='Task5', now=1491388086235}
 ```
 
 ###add
-```
+```java
 /**
      * Inserts the specified element into this delay queue.
      *
@@ -244,7 +244,7 @@ DelayTask{delay=5000, expire=1491388091235, msg='Task5', now=1491388086235}
 ```
 
 ###DelayQueue 的主要成员
-```
+```java
 public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
     implements BlockingQueue<E> {
     // 持有内部重入锁。
