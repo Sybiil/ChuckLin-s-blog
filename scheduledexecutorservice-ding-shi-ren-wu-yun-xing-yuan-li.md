@@ -18,7 +18,7 @@
     }
 
 ```
-一个每分钟定时执行的方法就完成了。编程正在向着越来越简单的方向发展。开源框架所带来了巨大的生产力效率提升，这是一件好事。
+一个每分钟定时执行的方法就完成了。编程正在向着越来越简单的方向发展。开源框架带来了巨大的生产力效率提升，这是一件好事。
 
 不过，像这样简单的配置就能实现的定时任务到底是如何运行的呢？实际上，现阶段 spring 的定时任务与 JUC 包中的周期性线程池密不可分。
 
@@ -28,11 +28,48 @@ JUC 包中的 Executor 架构带来了线程的创建与执行的分离。Execut
 - ThreadPoolExecutor 线程池
 - ScheduledThreadPoolExecutor 支持周期性任务的线程池
 
-通过 ThreadPoolExecutor 可以实现各式各样的自定义线程池，而 ScheduledThreadPoolExecutor 类则在自定义线程池的基础上增加了周期性的执行任务的功能。
+通过 ThreadPoolExecutor 可以实现各式各样的自定义线程池，而 ScheduledThreadPoolExecutor 类则在自定义线程池的基础上增加了周期性执行任务的功能。
 
 ###使用示例
 通过使用示例来了解 ScheduledThreadPoolExecutor 的用法
 ```java
+import java.time.LocalDateTime;
+
+/**
+ * 工作任务
+ */
+public class WorkerThread implements Runnable {
+
+    private String command;
+
+    public WorkerThread(String s) {
+        this.command = s;
+    }
+
+    @Override
+    public void run() {
+        
+        System.out.println(Thread.currentThread().getName() + " Start. Time = " + LocalDateTime.now());
+        processCommand();
+        System.out.println(Thread.currentThread().getName() + " End. Time = " + LocalDateTime.now());
+    }
+
+    private void processCommand() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public String toString() {
+        return this.command;
+    }
+}
+
+
+
 /**
  * 线程池测试类
  *
@@ -85,10 +122,24 @@ pool-1-thread-2 End. Time = 2017-04-06T23:08:13.616
 pool-1-thread-2 Start. Time = 2017-04-06T23:08:16.619
 ```
 通过使用 ScheduledExecutorService，很方便的实现了每3秒执行一次任务的需求。
-接下来通过几个关键性的 api 入手，逐步分析 ScheduledExecutorService 是如何实现定时任务的功能的。
 
-### scheduleWithFixedDelay 方法
+下面通过几个关键性的 api 入手，逐步分析 ScheduledExecutorService 是如何实现定时任务的功能的。
+
+### newScheduledThreadPool 方法
 ```java
+/**
+     * Creates a thread pool that can schedule commands to run after a
+     * given delay, or to execute periodically.
+     * @param corePoolSize the number of threads to keep in the pool,
+     * even if they are idle
+     * @return a newly created scheduled thread pool
+     * @throws IllegalArgumentException if {@code corePoolSize < 0}
+     */
+    public static ScheduledExecutorService newScheduledThreadPool(int corePoolSize) {
+        return new ScheduledThreadPoolExecutor(corePoolSize);
+    }
+
+
  /**
      * @throws RejectedExecutionException {@inheritDoc}
      * @throws NullPointerException       {@inheritDoc}
@@ -113,8 +164,34 @@ pool-1-thread-2 Start. Time = 2017-04-06T23:08:16.619
         delayedExecute(t);
         return t;
     }
+    
+    
+    
 ```
-将线程任务结合构造参数，封装为一个 DelayedFutureTask。 如果你还不了解什么是 DelayedTask，请参考我之前的一篇文章：深入 DelayQueue 内部实现。
+将线程任务结合构造参数，封装为一个 DelayedFutureTask。 如果你还不了解什么是 DelayedTask，请参考我之前的一篇文章：[深入 DelayQueue 内部实现](https://www.zybuluo.com/mikumikulch/note/712598)
+另外请注意，DelayedFutureTask 是默认实现了 Compare 接口的。
+```java
+public int compareTo(Delayed other) {
+            if (other == this) // compare zero if same object
+                return 0;
+            if (other instanceof ScheduledFutureTask) {
+                ScheduledFutureTask<?> x = (ScheduledFutureTask<?>)other;
+                long diff = time - x.time;
+                if (diff < 0)
+                    return -1;
+                else if (diff > 0)
+                    return 1;
+                else if (sequenceNumber < x.sequenceNumber)
+                    return -1;
+                else
+                    return 1;
+            }
+            long diff = getDelay(NANOSECONDS) - other.getDelay(NANOSECONDS);
+            return (diff < 0) ? -1 : (diff > 0) ? 1 : 0;
+        }
+
+
+```
 
 ### delayedExecute 方法
 ```java
@@ -136,10 +213,9 @@ pool-1-thread-2 Start. Time = 2017-04-06T23:08:16.619
     }
 
 ```
-只要线程池正常运行，则将 DelayedTask 添加到 workQueue 中。注意，workQueue 是定义在 ThreadPoolExecutor 当中的。
+只要线程池正常运行，则将 DelayedTask 添加到 workQueue 中。注意，workQueue 是定义在 ThreadPoolExecutor 当中的用来保存工作任务的阻塞队列。
 
 ###ensurePrestart 方法
-
 ```java
 
   /**
@@ -244,7 +320,7 @@ private boolean addWorker(Runnable firstTask, boolean core) {
 
 ```
 虽然 addWorker 的代码稍显复杂，不过你完全可以无视那一大块儿 CAS 处理，把注意力放到仅仅与定时任务主要逻辑紧密相关的地方上来。
-ensurePrestart 在 addWorker 中创建了工作者线程，添加到工作者队列以后启动线程。
+ensurePrestart 在 addWorker 中创建了工作者线程，添加到工作者队列以后启动线程。注意工作者线程不是工作任务线程。工作者线程是线程池启动的用来执行任务的线程。
 
 
 ### Worker Run 方法
@@ -304,7 +380,9 @@ final void runWorker(Worker w) {
     }
 
 ```
- 工作者通过循环从工作者任务队列中获取任务对象，调用对象的 run 方法执行线程任务。当执行结束时，工作者继续尝试从延迟阻塞工作者任务队列中后去新的任务对象进行执行。无论工作者线程处理了几个任务，任务的间隔总是由定义在每个任务对象中的间隔时间来决定的。
+工作者通过循环从工作者任务队列中反复获取任务对象，获取成功后调用对象的 run 方法执行线程任务。当执行结束时，工作者继续尝试从延迟阻塞工作者任务队列中后去新的任务对象进行执行。
+
+无论有几个工作者线程，无论某个工作者线程处理了几个任务，任务的间隔总是由定义在每个任务对象中的间隔时间来决定的。
  
  
 ### ScheduledFutureTask run 方法
@@ -329,7 +407,10 @@ final void runWorker(Worker w) {
         }
 
 ```
-ScheduledFutureTask 的 run 方法通过执行后重新计算时间，并将重新计算的后的对象重置回工作任务阻塞队列中的方式，实现了线程周期性的执行任务的功能。
+工作任务队列中的任务对象一旦被工作线程获取成功后，就会被从队列中移出。而其他之前阻塞在队列上，此时竞争到锁的工作者线程将会尝试获取任务队列中的下一个任务。
+
+调用成功获取到的 ScheduledFutureTask 的 run 方法，执行业务逻辑以后 将重新计算对象的 delay 时间，再通过 runAndReset 方法将重新计算的后的对象重置回工作任务阻塞队列中。由于默认实现的 compareTo 方法，
+这样，就实现了线程周期性的执行任务的功能。
 
 
 ##总结
