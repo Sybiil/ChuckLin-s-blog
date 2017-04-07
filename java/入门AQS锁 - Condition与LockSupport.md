@@ -289,7 +289,9 @@ private void doSignal(Node first) {
 
 现在，你是否理解了之前await()方法中的第四条处理的原因了？
 当第一次调用await()对线程进行阻塞时，当前线程会首先调用park()进入阻塞，并且加入到条件等待队列中。当某个线程调用此Condition对象的signal时，等待队列中的firstWaiter(第一个阻塞对象)会被加入到AQS锁的CLH队列中。
-注意，由于新获取到锁，调用await()的外部线程与本身处在CLH队列，由于某个线程释放锁，而被唤醒的阻塞线程，都有可能执行!isOnSyncQueue(node)判断。
+此时，若外部有一个竞争到锁的线程此时调用了 await，那么 会执行!isOnSyncQueue(node)判断，由于不在同步队列中，所以该线程会正常的执行阻塞方法。
+假设有一个被调用 signal ，加入到了 CLH 队列中的线程节点被唤醒。 由于被唤醒的阻塞线程会在 loop 中继续执行 !isOnSyncQueue(node) 方法，而被唤醒的线程不需要进行阻塞，而应该尝试执行竞争锁的逻辑。
+
 所以，!isOnSyncQueue(node)就是用来判断当前线程是否在CLH队列，来确定当前线程是被唤醒的线程，还是获取到锁的外部线程的。
 
 ## 总结
