@@ -45,7 +45,4 @@
 * [python](章节/python.md)
   * [Python3.x、urllib、与HTTPCookieProcessor趣事](python/Python3.x、urllib、与HTTPCookieProcessor趣事.md)
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
-* [mysql](mysql.md)
-* [SQL 常用优化手段总结 - 分析 SQL 语句的一般步骤](sql-chang-yong-you-hua-shou-duan-zong-jie-fen-xi-sql-yu-ju-de-yi-ban-bu-zou.md)
-* [SQL 常用优化手段总结 - 索引的应用](sql-chang-yong-you-hua-shou-duan-zong-jie-suo-yin-de-ying-yong.md)
 
