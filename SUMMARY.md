@@ -45,4 +45,5 @@
 * [python](章节/python.md)
   * [Python3.x、urllib、与HTTPCookieProcessor趣事](python/Python3.x、urllib、与HTTPCookieProcessor趣事.md)
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
+* [mysql](mysql.md)
 
