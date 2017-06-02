@@ -51,6 +51,7 @@
   * [SQL 常用优化手段总结 - 索引的使用误区](mysql/SQL 常用优化手段总结 - 索引的使用误区.md)
   * [SQL 常用优化手段总结 - 索引的应用](mysql/SQL 常用优化手段总结 - 索引的应用.md)
   * [SQL 常用优化手段总结 - 分析 SQL 语句的一般步骤](mysql/SQL 常用优化手段总结 - 分析 SQL 语句的一般步骤.md)
+  * [SQL 常用优化手段总结 - 小技巧](sql-chang-yong-you-hua-shou-duan-zong-jie-xiao-ji-qiao.md)
 
 ## 写点生活
 
