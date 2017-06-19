@@ -2,11 +2,11 @@
 
 ---
 
-经过艰苦卓绝的训练与尝试，我们成功分析出了有问题的 sql 语句。接着该针对问题语句进行更进一步的优化了。索引就是往往在这个时候被引入来解决 sql 的运行效率问题。
+经过上一章艰苦卓绝的训练与尝试，我们成功分析出了有问题的 sql 语句。接下来该针对问题语句进行更进一步的优化了。索引往往在这个时候被引入来解决 sql 的运行效率的问题。
 
-虽然索引的使用十分广泛，可惜不少程序员都对索引存在一些误用。误用索引不仅不能解决问题，还会进一步恶化性能。
+虽然索引的使用十分广泛，但是部分开发人员对索引的知识没有成体系的了解，造成了误用索引。误用索引不仅不能解决问题，还会进一步恶化性能。
 
-通过阅读索引章节的内容将你将掌握以下几个知识点，从而建立起正确运用索引的基本知识。
+好消息是，过阅读索引相关的章节的内容你将掌握以下几个知识点，从而建立起正确运用索引的基本知识。
 
 - 索引是什么，都有哪些索引？
 - 与索引相关的术语的基本概念。
@@ -14,7 +14,7 @@
 - 哪些典型的场景无法使用索引？
 
 ##索引是什么？都有哪些索引？
-和书本能够利用目录快速定位到具体内容一样，索引也能够快速查询到数据库表中的具体内容。 索引就是数据库的目录。
+和书本能够利用目录快速定位到具体内容一样，索引也能够快速查询到数据库表中的具体内容。索引就是数据库的目录。
 
 真正的索引是在 mysql 存储引擎中实现的。所以每种不同的存储引擎都对应了不同的索引类型。
 常见的索引类型分为以下四种：
@@ -64,7 +64,7 @@ CREATE TABLE `test_table` (
 ```sql
 explain SELECT * FROM test.test_table where age >15 and age <20
 ```
-![image_1bg3isb434aq5o33u1c3o1qgv2n.png-51.4kB][2]
+![image_1bgoc670t130r1l2g11qp1e569nu9.png-46.8kB][3]
 type 为 range，说明优化器选择范围查询。索引 key 为 AGE 代表选择了 AGE 索引来加速访。注意本例中的 Extra 字段。Using index condition 代表在利用索引查询后，还需要对索引回表查询数据。但是把数据过滤操作下方到了存储引擎，从而减少了 IO 处理。
 
 ###匹配最左前缀
@@ -85,20 +85,20 @@ CREATE TABLE `test_table` (
   KEY `LeftMostPreFix` (`name`,`address`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8
 ```
-LeftMostPreFix 索引由 name、address 两列组成。在使用这个索引进行查询时，只有 name 或者 address、name and address 可以生效。
+LeftMostPreFix 索引由 name、address 两列组成。在使用这个索引进行查询时，只有 name 、name and address 可以生效。
 直接使用 address 或者 address 以及 name 进行查询时候，索引都无法生效。
 ```sql
  explain SELECT * FROM test.test_table where  name = ' 张' and address = '东京'
 
 ```
 
-![image_1bg3g3bhb4ftec14kro8ns542a.png-50.8kB][3]
+![image_1bg3g3bhb4ftec14kro8ns542a.png-50.8kB][4]
 
 但是，如果仅仅是使用 address 进行查询的话，则复合索引无法产生效果。
 ```sql
  explain SELECT * FROM test.test_table where  address = '东京'
 ```
-![image_1bg3g4sv21oqh8be1bud1ptl114h9.png-41.9kB][4]
+![image_1bg3g4sv21oqh8be1bud1ptl114h9.png-41.9kB][5]
 
 ###覆盖索引查询
 
@@ -107,7 +107,7 @@ LeftMostPreFix 索引由 name、address 两列组成。在使用这个索引进�
  explain SELECT name FROM test.test_table where  name = ' 林'
 ```
 
-![image_1bg3g8fg71pj3rck1j7p13cg1clhm.png-46.2kB][5]
+![image_1bg3g8fg71pj3rck1j7p13cg1clhm.png-46.2kB][6]
 
 Extra 变成了 Using index。代表只需要访问索引就能得到全部数据，不需要通过索引获得地址后，再回表进行扫描。
 
@@ -135,14 +135,14 @@ CREATE TABLE `test_table` (
 ```sql
  explain SELECT * FROM test.test_table where address like '东%'
 ```
-![image_1bg3gpoh0126g1nbm1m64fsj1fmd1g.png-45.1kB][6]
+![image_1bg3gpoh0126g1nbm1m64fsj1fmd1g.png-45.1kB][7]
 成功运用到索引 ADDRESS。查询类型为 range。
 
 然后违背左前缀匹配原则，使用 Like 关键字再查询一次。
 ```sql
 explain SELECT * FROM test.test_table where address like '%京'
 ```
-![image_1bg3gr2rd4to4p01v9c74o7nn1t.png-41.9kB][7]
+![image_1bg3gr2rd4to4p01v9c74o7nn1t.png-41.9kB][8]
 
 type 为 ALL、key 为 null 表示该次查询未使用索引，而是通过全表扫描进行了查询。全表扫描的性能在数据量较大时比较低下，应该尽量频繁进行全表扫描查询。
 
@@ -170,8 +170,9 @@ CREATE TABLE `test_table` (
 ```sql
 explain SELECT  name FROM test.test_table where name = '张' and age < 20;
 ```
-![image_1bg3i2mo0tslo88im17t51vfn2a.png-49.9kB][8]
-表中含有索引 name但没有 name 与 age 的复合索引。所以本次查询首先通过 NAME 索引定位到表地址，然后 using where 回表扫描根据 age < 20 过滤掉不符合条件的数据。由于 age < 20 条件的存在，即使语句只查询了 name 字段也必须回表扫描从而f无法形成索引覆盖查询，对查询性能造成了影响。
+![image_1bg3i2mo0tslo88im17t51vfn2a.png-49.9kB][9]
+表中含有索引 name 但没有 name 与 age 的复合索引。所以本次查询首先通过 NAME 索引定位到表地址，然后 using where 回表扫描根据 age < 20 过滤掉不符合条件的数据。由于 age < 20 条件的存在，即使语句只查询了 name 字段也必须回表扫描从而无法形成索引覆盖查询，对查询性能造成了影响。
+
 
 ##总结
 以上场景包含了精确匹配、模糊匹配、范围匹配、多条件匹配的查询语句，大部分业务用的查询都离不开这四种范畴。只要在使用索引时牢记住：
@@ -179,21 +180,22 @@ explain SELECT  name FROM test.test_table where name = '张' and age < 20;
 - 左前缀原则 
 - 尽量使用索引覆盖查询
 - 索引常量的查询比范围索引查询效率更高
+- 当查询涉及范围查询时，尽量将精确匹配的条件放在前面。
 
 便能享受索引所带来的性能提升。在下一章节，将会继续分享常见的索引误用场景。学会运用索引并且避免误用索引，是应对业务中常见的查询语句性能问题的关键所在。
 
 
 ---
-*
-参考书籍*
+*参考书籍*
 *《深入浅出 mysql》*
 
 
   [1]: http://static.zybuluo.com/mikumikulch/zuqchbxkq2maphi6pxhsw4ak/image_1bg37jhm96kr1qgl1864cobor39.png
   [2]: http://static.zybuluo.com/mikumikulch/rkgjhif22l9vc8hhriolvfbw/image_1bg3j72qh160nmvnta15um1n2434.png
-  [3]: http://static.zybuluo.com/mikumikulch/o5vmlkjzc4cpk277mksigi8p/image_1bg3g3bhb4ftec14kro8ns542a.png
-  [4]: http://static.zybuluo.com/mikumikulch/msjvr9xl1a7yhvy5aeoquuen/image_1bg3g4sv21oqh8be1bud1ptl114h9.png
-  [5]: http://static.zybuluo.com/mikumikulch/dg1ue7q34iad5n5gh3doh6aw/image_1bg3g8fg71pj3rck1j7p13cg1clhm.png
-  [6]: http://static.zybuluo.com/mikumikulch/cn6bna9ean95xmexjo5ivd1b/image_1bg3gpoh0126g1nbm1m64fsj1fmd1g.png
-  [7]: http://static.zybuluo.com/mikumikulch/iid14z7dnq9zv9b6ri3f4qeg/image_1bg3gr2rd4to4p01v9c74o7nn1t.png
-  [8]: http://static.zybuluo.com/mikumikulch/l66ops4objnhnz8prozsi4rg/image_1bg3i2mo0tslo88im17t51vfn2a.png
+  [3]: http://static.zybuluo.com/mikumikulch/do5xtj56ywqrkdmicotw5089/image_1bgoc670t130r1l2g11qp1e569nu9.png
+  [4]: http://static.zybuluo.com/mikumikulch/o5vmlkjzc4cpk277mksigi8p/image_1bg3g3bhb4ftec14kro8ns542a.png
+  [5]: http://static.zybuluo.com/mikumikulch/msjvr9xl1a7yhvy5aeoquuen/image_1bg3g4sv21oqh8be1bud1ptl114h9.png
+  [6]: http://static.zybuluo.com/mikumikulch/dg1ue7q34iad5n5gh3doh6aw/image_1bg3g8fg71pj3rck1j7p13cg1clhm.png
+  [7]: http://static.zybuluo.com/mikumikulch/cn6bna9ean95xmexjo5ivd1b/image_1bg3gpoh0126g1nbm1m64fsj1fmd1g.png
+  [8]: http://static.zybuluo.com/mikumikulch/iid14z7dnq9zv9b6ri3f4qeg/image_1bg3gr2rd4to4p01v9c74o7nn1t.png
+  [9]: http://static.zybuluo.com/mikumikulch/l66ops4objnhnz8prozsi4rg/image_1bg3i2mo0tslo88im17t51vfn2a.png
