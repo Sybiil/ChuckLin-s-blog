@@ -29,13 +29,13 @@ explain select 语句所返回的结果包含了该查询语句的执行细节�
 - range 索引范围扫描 如： <、>、between 等操作符
 - ref 使用非唯一索引扫描或前缀扫描。
 - eq-ref 
-- const,system 使用唯一索引时，查询类型为 const。当查询的表只有一行时，查询类型为 system。
+- const、system 当检索条件对应到索引中为固定的值时，查询类型为 const。当查询的表只有一行时，查询类型为 system。
 - NULL 不需要检索表就能得到结果，如 select 1 
 
 从上到下，性能由最差到最好。一般来说，至少也要优化语句达到 range 这个等级。
 
 ##show profile 分析 SQL
-show profle 能够在做 SQL 优化时帮助我们了解事件都耗费到哪里去了。
+show profle 能够在做 SQL 优化时帮助我们了解时间都耗费到哪里去了。
 通常来说，对于一般的开发人员来讲 Explain 已经足够解决问题了。对于相关 show profile 的信息请查阅 mysql 官方手册。
 
 ##trace 分析优化器
