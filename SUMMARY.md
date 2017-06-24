@@ -17,8 +17,8 @@
   * [入门AQS锁 - ReadLock与WriteLock](java/入门AQS锁 - ReadLock与WriteLock.md)
   * [入门AQS锁 - ReentrantLock与Condition](java/入门AQS锁 - ReentrantLock与Condition.md)
   * [入门AQS锁 - Semaphore](java/入门AQS锁 - Semaphore.md)
-  * [深入 DelayQueue 内部实现](shen-ru-delayqueue-nei-bu-shi-xian.md)
-  * [ScheduledExecutorService 定时任务运行原理](scheduledexecutorservice-ding-shi-ren-wu-yun-xing-yuan-li.md)
+  * [深入 DelayQueue 内部实现](java/深入 DelayQueue 内部实现.md)
+  * [ScheduledExecutorService 定时任务运行原理](java/ScheduledExecutorService 定时任务运行原理.md)
   * [实用泛型说明](java/实用泛型说明.md)
   * [死锁是什么？如何避免死锁？](java/死锁是什么？如何避免死锁？.md)
 * [web应用安全](章节/web安全.md)
@@ -49,10 +49,10 @@
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
 * [mysql](章节/mysql.md)
   * [SQL 常用优化手段总结 - 索引的使用误区](mysql/SQL 常用优化手段总结 - 索引的使用误区.md)
-  * [SQL 常用优化手段总结 - 认识数据库锁](sql-chang-yong-you-hua-shou-duan-zong-jie-ren-shi-shu-ju-ku-suo.md)
+  * [SQL 常用优化手段总结 - 认识数据库锁](mysql/SQL 常用优化手段总结 - 认识数据库锁.md)
   * [SQL 常用优化手段总结 - 索引的应用](mysql/SQL 常用优化手段总结 - 索引的应用.md)
   * [SQL 常用优化手段总结 - 分析 SQL 语句的一般步骤](mysql/SQL 常用优化手段总结 - 分析 SQL 语句的一般步骤.md)
-  * [SQL 常用优化手段总结 - 小技巧](sql-chang-yong-you-hua-shou-duan-zong-jie-xiao-ji-qiao.md)
+  * [SQL 常用优化手段总结 - 小技巧](mysql/SQL 常用优化手段总结 - 小技巧 .md)
 
 ## 写点生活
 
