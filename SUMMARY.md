@@ -49,6 +49,7 @@
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
 * [mysql](章节/mysql.md)
   * [SQL 常用优化手段总结 - 索引的使用误区](mysql/SQL 常用优化手段总结 - 索引的使用误区.md)
+  * [SQL 常用优化手段总结 - 认识数据库锁](sql-chang-yong-you-hua-shou-duan-zong-jie-ren-shi-shu-ju-ku-suo.md)
   * [SQL 常用优化手段总结 - 索引的应用](mysql/SQL 常用优化手段总结 - 索引的应用.md)
   * [SQL 常用优化手段总结 - 分析 SQL 语句的一般步骤](mysql/SQL 常用优化手段总结 - 分析 SQL 语句的一般步骤.md)
   * [SQL 常用优化手段总结 - 小技巧](sql-chang-yong-you-hua-shou-duan-zong-jie-xiao-ji-qiao.md)
