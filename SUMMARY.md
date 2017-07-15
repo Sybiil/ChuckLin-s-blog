@@ -56,3 +56,5 @@
 
 ## 写点生活
 
+* [软技能读书笔记](ruan-ji-neng-du-shu-bi-ji.md)
+
