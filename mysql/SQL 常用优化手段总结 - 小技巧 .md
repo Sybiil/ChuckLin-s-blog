@@ -51,7 +51,7 @@ explain SELECT name  FROM test.test_index_table where name = ' 张三' order by 
 
 
 ##优化 Group By 语句
-即使你没有显示的指定 order by 语句，mysql 在默认情况下会多所有 Group By col1，col2的字段进行排序。
+即使你没有显示的指定 order by 语句，mysql 在默认情况下会对所有 Group By col1，col2的字段进行排序。
 ```sql
 explain SELECT *  FROM test_index_table group by age 
 ```
