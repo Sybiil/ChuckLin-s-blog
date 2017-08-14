@@ -24,7 +24,7 @@ web api 就像一张名片一样，专业的名片可以迅速帮助你与客户
 | Twitter | api.twitter.com/1.1 | "治国理政平台" |
 | Google Calendar | www.googleapis.com/calendar/v3 | "大厂" |
 | instagram | api.instagram.com/v1/usrs/search?q=jack | "宠物自拍网站" |
-| linkedin | api.linkedin.com/v1/ people-search   | "招工" |
+| linkedin | api.linkedin.com/v1/people-search   | "招工" |
 | Tumblr | api.tumblr.com/v2 | "真的不是成人网站" |
 | foursquare|  api.foursquare.com/v2/venues/search?q=apple&categoryId=asad123456 | "基于地理位置射交" |
 
@@ -34,15 +34,28 @@ web api 就像一张名片一样，专业的名片可以迅速帮助你与客户
 ###背口诀
 补充一下，端点就是指 uri，应用通过 uri 访问 api 提供的功能。国际大厂的设计往往都具备以下几个特点：
 
-- 短小便于输入的 URI。没人喜欢复杂的单词。
-- 人可以读懂的 URI。名片是拿给人读的。
-- 没有大小写混用的 URI。实际上一般的事实规范是建议全部小写。
-- 修改方便的 URI。api.sample.com/user/:id 傻子都看的出来通过变量 id可以访问不同的用户信息。
-- 不会暴露服务端架构的 URI。api.sample.com/servlet/login.do 这样的代码傻子都知道后端是用面向环境编程的语言写的。
-- 规则统一的 URI。api.com.cn/Api/user-InfoById/info.json emmmmmmmmm?
-- 当端点里出现两个以上的单词时，使用脊柱法（连词符号）。 profile-image
+- 短小便于输入的 URI。
+>没人喜欢复杂的单词。
+
+- 人可以读懂的 URI。
+>名片是拿给人读的。不要把机器码和16进制写到 URI 里。
+
+- 没有大小写混用的 URI。
+>实际上一般的事实规范是建议全部小写。
+
+- 修改方便的 URI。
+> api.sample.com/user/:id 傻子都看的出来通过变量 id可以访问不同的用户信息。
+
+- 不会暴露服务端架构的 URI。
+>api.sample.com/servlet/login.do 这样的代码傻子都知道后端是用面向环境编程的语言写的。
+
+- 规则统一的 URI。
+> api.com.cn/Api/user-InfoById/info.json
+
+- 当端点里出现两个以上的单词时，使用脊柱法（连词符号），如：profile-image
 
 大部分工程师都很聪明，所以根本没有必要对所有的特点进行说明。你只要把以上特点都背下来然后记在脑子里。
+
 
 ###合理利用 REST API
 
