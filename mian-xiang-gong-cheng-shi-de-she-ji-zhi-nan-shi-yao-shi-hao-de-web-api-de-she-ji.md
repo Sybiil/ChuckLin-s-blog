@@ -52,7 +52,8 @@ web api 就像一张名片一样，专业的名片可以迅速帮助你与客户
 - 规则统一的 URI。
 > api.com.cn/Api/user-InfoById/info.json
 
-- 当端点里出现两个以上的单词时，使用脊柱法（连词符号），如：profile-image
+- 当端点里出现两个以上的单词时，使用脊柱法（连词符号）。
+> api.linkedin.com/v1/people-search
 
 大部分工程师都很聪明，所以根本没有必要对所有的特点进行说明。你只要把以上特点都背下来然后记在脑子里。
 
@@ -62,9 +63,9 @@ web api 就像一张名片一样，专业的名片可以迅速帮助你与客户
 谈到 WEB API 离不开的概念就是 REST API。那么优雅的 API 是不是一定要采用 REST API 来设计呢？
 要理清这个问题首先要搞明白 REST 的准确含义到底是什么。REST API 的概念首先出现在 Roy Fielding 的论文中。
 
->狭义上的 REST API 实际上就是指符合 Fielding 的 REST 架构风格的 Web 服务系统。REST API 的设计风格严谨，考虑周全，结构优美。但过于苛刻的标准一直是狭义 REST API 推广壮大的绊脚石。
+狭义上的 REST API 实际上就是指符合 Fielding 的 REST 架构风格的 Web 服务系统。REST API 的设计风格严谨，考虑周全，结构优美。但过于苛刻的标准一直是狭义 REST API 推广壮大的绊脚石。
 
->广义上的 REST API 指符合 RPC 风格的 JSON + Http 的接口的系统。这样的 REST API 却又过于粗犷和随意了。
+广义上的 REST API 指符合 RPC 风格的 JSON + Http 的接口的系统。这样的 REST API 却又过于粗犷和随意了。
 
 于是，针对 WEB API 的发展以及广义 REST 与 狭义 REST 的特点， Martin Fowler 的提出在达到完美的 REST API 之前有以下几种 API 的设计级别。
 
