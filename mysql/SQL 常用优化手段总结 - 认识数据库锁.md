@@ -189,10 +189,26 @@ select * from information_schema.innodb_locks
 最后，本系列的各项知识点对于开发人员来说非常重要。掌握了这些知识点，才算是基本入门关系型数据库，称得上一个合格的 web 后端工程师，写的出合格的应用程序。
 
 
+---
+
+参考书籍
+- 《深入浅出 mysql》
 
 ---
-*参考书籍*
-*《深入浅出 mysql》*
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
+
+
+
+
 
 
   [1]: http://static.zybuluo.com/mikumikulch/563oeetth50hj2fhbtc60f49/image_1bjc51gaf1douqq81uqgg2h3fi2n.png
