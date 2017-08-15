@@ -88,10 +88,19 @@ on a.id = b.id
 本问提及的优化手段虽然十分浅显，但是却至关重要。一个 web 工程大部分的性能问题都是由 database IO 引起的。对 SQL 语句进行适当的合理优化能够解决一个 web 工程80%的性能问题。所以乘着下午茶时间还没有结束，赶快再复习复习这些小技巧吧。
 
 ---
-*参考书籍*
-*《深入浅出 mysql》*
+参考书籍
+- 《深入浅出 mysql》
+
+---
+
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
 
 
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
 
 
   [1]: http://static.zybuluo.com/mikumikulch/bf4ifvp3ybv0zx3w6wn6wdt3/image_1bhd1bbnb91v1hn1fsq1e2e589.png
