@@ -187,8 +187,18 @@ SSL加密解密的过程看起来完美无瑕，无懈可击。你根本无法�
   4. 电子证书是通过第三方权威机构，结合非对称加密系统，对双方身份的一种认证，是为了保证数据的安全性。
   
   
-  
-  
+ ---
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
+
   
   
 
