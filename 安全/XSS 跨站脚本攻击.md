@@ -139,7 +139,7 @@ CSP 目前有两版，CSP1 和CSP2， 两版的支持状态可以在 http://cani
 XSS 与 CSRF 攻击都是属于高危攻击手段。即使是在现代浏览器、同源策略以及 html5 的强大防线下，他们依然能够对 web 应用产生巨大的危害。
 在开发 web 应用时，应该合理利用 http-only、CSP 策略、以及用户输入信息转义，能够将 XSS 与 CSRF 的风险降到最低。
 
-
+---
 #####参考链接
 - [避免 SQL 注入](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/09.4.md), by wuyuanwei
 - [Web 攻击与防护](http://liuwanlin.info/webgong-ji-yu-fang-hu/), by liuwulin
@@ -149,6 +149,13 @@ XSS 与 CSRF 攻击都是属于高危攻击手段。即使是在现代浏览器�
 - [关于Web安全，99%的网站都忽略了这些](https://blog.wilddog.com/?p=290), by wilddog
 - [预防跨站点请求伪造：了解浏览器选项卡中的隐藏危险](https://www.ibm.com/developerworks/cn/web/se-appscan-detect-csrf-xsrf/)
 - [CSRF 攻击的应对之道](http://www.importnew.com/5839.html)
+
+若文章有幸帮到了您，您可以捐助我。以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][1]![wechat.jpg-16.7kB][2]
+
+
+[1]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[2]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
 
 
 
