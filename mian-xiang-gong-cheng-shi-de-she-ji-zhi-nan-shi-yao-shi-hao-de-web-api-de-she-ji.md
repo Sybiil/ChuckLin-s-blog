@@ -91,15 +91,17 @@ web api 就像一张名片一样，专业的名片可以迅速帮助你与客户
 
 
 ---
+Copyright 2017/08/15 by Chuck Lin
 
 参考书籍
 《Web Api 的设计与开发》
 
-**如果你觉得这篇文章帮到了你，欢迎你请我喝咖啡以鼓励我写出更多更棒的作品。
-支付宝：mikumiku.lch@homtail.com**
+若文章有幸帮到了您，您可以捐助我。以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][1]![wechat.jpg-16.7kB][2]
 
-Copyright 2017/08/15 by Chuck Lin
 
+  [1]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+  [2]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
 
 
 
