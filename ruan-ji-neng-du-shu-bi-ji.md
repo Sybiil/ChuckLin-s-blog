@@ -71,5 +71,14 @@
 - 主动寻找失败，即使全世界都认为你是一个傻瓜。脱离自己的舒适区，才能成长的更快。
 - 不要把他人的话当成福音。
 
+---
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
 
 
