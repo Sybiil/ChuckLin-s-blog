@@ -27,7 +27,6 @@
   * [SQL 注入](安全/SQL 注入.md)
   * [XSS 跨站脚本攻击](安全/XSS 跨站脚本攻击.md)
   * [XSRF 跨站请求伪造](安全/XSRF 跨站请求伪造.md)
-  * 设计
 * [linux](章节/linux.md)
   * [vsftpDaemon搭建问题手册](linux/vsftpDaemon搭建问题手册.md)
   * [在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题](linux/在开启 SELinux 的宿主上使用 docker 挂载时产生的权限不足的问题.md)
