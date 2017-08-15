@@ -150,7 +150,7 @@ XSS 与 CSRF 攻击都是属于高危攻击手段。即使是在现代浏览器�
 - [预防跨站点请求伪造：了解浏览器选项卡中的隐藏危险](https://www.ibm.com/developerworks/cn/web/se-appscan-detect-csrf-xsrf/)
 - [CSRF 攻击的应对之道](http://www.importnew.com/5839.html)
 
-若文章有幸帮到了您，您可以捐助我。以鼓励我写出更棒的作品！
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
 ![alipay.jpg-17.7kB][1]![wechat.jpg-16.7kB][2]
 
 
