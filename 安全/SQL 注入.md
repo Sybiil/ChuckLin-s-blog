@@ -75,6 +75,7 @@ SQL注入攻击的危害这么大，那么该如何来防治呢?下面这些建�
 
 通过上面的示例我们可以知道，SQL注入是危害相当大的安全漏洞。所以对于我们平常编写的Web应用，应该对于每一个小细节都要非常重视，细节决定命运，生活如此，编写Web应用也是这样。
 
+---
 
 ####参考链接
 - [避免 SQL 注入](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/09.4.md), by wuyuanwei
@@ -85,6 +86,16 @@ SQL注入攻击的危害这么大，那么该如何来防治呢?下面这些建�
 - [关于Web安全，99%的网站都忽略了这些](https://blog.wilddog.com/?p=290), by wilddog
 - [预防跨站点请求伪造：了解浏览器选项卡中的隐藏危险](https://www.ibm.com/developerworks/cn/web/se-appscan-detect-csrf-xsrf/)
 - [CSRF 攻击的应对之道](http://www.importnew.com/5839.html)
+
+
+若文章有幸帮到了您，您可以捐助我。以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][1]![wechat.jpg-16.7kB][2]
+
+
+[1]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[2]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
 
 
 
