@@ -187,8 +187,20 @@ explain SELECT  name FROM test.test_table where name = '张' and age < 20;
 
 
 ---
-*参考书籍*
-*《深入浅出 mysql》*
+
+参考书籍
+- 《深入浅出 mysql》
+
+---
+
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
 
 
   [1]: http://static.zybuluo.com/mikumikulch/zuqchbxkq2maphi6pxhsw4ak/image_1bg37jhm96kr1qgl1864cobor39.png
