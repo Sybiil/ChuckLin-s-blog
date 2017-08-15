@@ -45,6 +45,19 @@
 
 最后，下一章我们将学习 CSRF 跨站请求伪造（Cross-Site Request Forgery），来加深对跨域、同源、CORS 运行原理的理解。
 
+---
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][1]![wechat.jpg-16.7kB][2]
+
+
+[1]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[2]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
+
+
+
 
 
 
