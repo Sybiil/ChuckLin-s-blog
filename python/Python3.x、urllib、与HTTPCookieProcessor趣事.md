@@ -127,5 +127,18 @@ def search_hotel_info(self, checkindate, checkoutdate, region_id, openner):
 2. 通过HTTPCookieProcessor创建的opener在发送请求时，无法按照预想的request header发送请求。
 3. 我们通过install_opener与urlopen可以同时处理head与cookie。
 
+---
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
+
+
   [1]: http://static.zybuluo.com/mikumikulch/3ui3k7w92v6b9ooq0vn8nf4a/request1.png
   [2]: http://static.zybuluo.com/mikumikulch/b2parqmc5oh5gjar7965nba5/request2.png
