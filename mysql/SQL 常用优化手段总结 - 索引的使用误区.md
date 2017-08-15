@@ -104,9 +104,25 @@ Handler_read_key 的值代表了一个行被索引值读的次数。若值较高
 最后，索引在精不在多。对于某些经常被访问的查询我们可以尝试使用索引来优化执行效率。而对于某个速度很慢但是为系统管理员设计的查询，是否需要加上索引就需要结合实际情况判断了！
 
 
+参考书籍：
+- 《深入浅出 Mysql》
+
 ---
-*参考书籍：*
-*《深入浅出 Mysql》*
+
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
+
+
+
+
     
 
 
