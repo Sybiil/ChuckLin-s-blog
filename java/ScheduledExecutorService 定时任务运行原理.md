@@ -419,5 +419,18 @@ ScheduledThreadPoolExecutor 的实现并不复杂，主要是理解有序队列�
 
 另外，我们常用的 quartz 就是借用了 ScheduledThreadPoolExecutor 来实现定时任务的执行与调度，只不过提供了一种更友好的方式去表达定时任务的配置方式，为 ScheduledThreadPoolExecutor 需要的数据做了封装。真正的功能还是围绕在 ScheduledThreadPoolExecutor上。
 
+---
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][99]
+![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
+
 
 

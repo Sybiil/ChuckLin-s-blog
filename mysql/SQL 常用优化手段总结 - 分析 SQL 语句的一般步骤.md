@@ -51,7 +51,8 @@ mysql 5.6提供了对 SQL 的跟踪 trace。该功能进一步展示了优化器
 Copyright 2017/08/15 by Chuck Lin
 
 若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
-![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+![alipay.jpg-17.7kB][99]
+![wechat.jpg-16.7kB][98]
 
 
 [99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg

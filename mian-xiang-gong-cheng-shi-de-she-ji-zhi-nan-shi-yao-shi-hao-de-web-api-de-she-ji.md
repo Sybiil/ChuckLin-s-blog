@@ -97,7 +97,8 @@ Copyright 2017/08/15 by Chuck Lin
 《Web Api 的设计与开发》
 
 若文章有幸帮到了您，您可以捐助我。以鼓励我写出更棒的作品！
-![alipay.jpg-17.7kB][1]![wechat.jpg-16.7kB][2]
+![alipay.jpg-17.7kB][1]
+![wechat.jpg-16.7kB][2]
 
 
   [1]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
