@@ -291,6 +291,18 @@ JDK8的日期API优雅简洁，我认为大多数情况即使不使用DateUtil�
 4. 你还有什么理由不在JDK8的项目中使用新API？
 5. 除了这个 DateUtil 以外，笔者提供了一个更详细的新日期API使用示例[JDK8DateAPI.java](https://github.com/mikumikulch/model-application/tree/dev/src/date)，供参考。
 
+
+---
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
 [^1]: 本小节参照了[廖雪峰的官方网站：python教程-datatime](http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431937554888869fb52b812243dda6103214cd61d0c2000)中的相关段落，有兴趣的读者请前往廖老师的官网了解详情。
 
 [^2]: 本小节参照了[importNew-Java8 日期/时间（Date Time）API指南](http://www.importnew.com/14140.html)中的相关段落，有兴趣的读者请前往importNew了解详情。

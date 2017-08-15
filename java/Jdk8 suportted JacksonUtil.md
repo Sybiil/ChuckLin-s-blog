@@ -584,6 +584,30 @@ public class User {
 
 
 
+---
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   [1]: http://static.zybuluo.com/mikumikulch/uc75ln83inw2zwknaqzi96d4/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-11-19%20%E4%B8%8B%E5%8D%882.36.33.png
   [2]: http://static.zybuluo.com/mikumikulch/tkp3avlh7ao4b4b2509rycqk/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-11-19%20%E4%B8%8B%E5%8D%883.20.34.png

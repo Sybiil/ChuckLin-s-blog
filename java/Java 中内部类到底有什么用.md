@@ -272,6 +272,16 @@ public class SpacecraftRobot extends Guider {
 2. 当你希望隐藏一个类的实现，减少工程中.java文件数量，或者这个类不想被扩展时，你可以通过匿名内部类来创建一个类的对象。
 3. java虽然无法直接在语法层面上支持闭包，但是可以通过内部类来模拟一个闭包的程序结构。
 
+---
+Copyright 2017/08/15 by Chuck Lin
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
 
 
 

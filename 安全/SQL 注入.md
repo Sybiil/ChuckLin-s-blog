@@ -89,8 +89,8 @@ SQL注入攻击的危害这么大，那么该如何来防治呢?下面这些建�
 
 
 若文章有幸帮到了您，您可以捐助我。以鼓励我写出更棒的作品！
-![alipay.jpg-17.7kB][1]
-![wechat.jpg-16.7kB][2]
+
+![alipay.jpg-17.7kB][1]![wechat.jpg-16.7kB][2]
 
 
 [1]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
