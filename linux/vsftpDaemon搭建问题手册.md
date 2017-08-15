@@ -58,3 +58,19 @@ allow_writeable_chroot=YES
 4. 类似于防火墙这样的设置，通过tty7接口的图形操作界面来进行设置会取得事半功倍的效果。
 
   [1]: http://static.zybuluo.com/mikumikulch/4ladtk4ybdd8qv4wcqpn1rez/ftp.png
+  
+---
+Copyright 2017/08/15 by Chuck Lin
+
+
+
+若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
+
+
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
+
+

@@ -76,6 +76,9 @@ CSRF 是一种危害非常大的攻击，又很难以防范。目前几种防御
 
 
 ---
+Copyright 2017/08/15 by Chuck Lin
+
+
 
 #####参考链接
 - [避免 SQL 注入](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/09.4.md), by wuyuanwei

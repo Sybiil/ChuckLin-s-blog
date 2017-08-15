@@ -140,6 +140,9 @@ XSS 与 CSRF 攻击都是属于高危攻击手段。即使是在现代浏览器�
 在开发 web 应用时，应该合理利用 http-only、CSP 策略、以及用户输入信息转义，能够将 XSS 与 CSRF 的风险降到最低。
 
 ---
+
+Copyright 2017/08/15 by Chuck Lin
+
 #####参考链接
 - [避免 SQL 注入](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/09.4.md), by wuyuanwei
 - [Web 攻击与防护](http://liuwanlin.info/webgong-ji-yu-fang-hu/), by liuwulin
