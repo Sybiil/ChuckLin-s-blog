@@ -75,8 +75,6 @@ token 解决方案的问题在于前后端代码的巨大变更。并且每一�
 CSRF 是一种危害非常大的攻击，又很难以防范。目前几种防御策略虽然可以很大程度上抵御 CSRF 的攻击，但并没有一种完美的解决方案。一些新的方案正在研究之中，比如对于每次请求都使用不同的动态口令，把 Referer 和 token 方案结合起来，甚至尝试修改 HTTP 规范，但是这些新的方案尚不成熟，要正式投入使用并被业界广为接受还需时日。在这之前，我们只有充分重视 CSRF，根据系统的实际情况选择最合适的策略，这样才能把 CSRF 的危害降到最低。
 
 
----
-Copyright 2017/08/15 by Chuck Lin
 
 
 
@@ -93,12 +91,22 @@ Copyright 2017/08/15 by Chuck Lin
   [1]: http://static.zybuluo.com/mikumikulch/ta5h6dxooi0wzkkqq1st8y7n/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-04-03%20%E4%B8%8B%E5%8D%8812.11.03.png
   
   
+---
+
+Copyright 2017/08/15 by Chuck Lin
+
 若文章有幸帮到了您，您可以捐助我，以鼓励我写出更棒的作品！
-![alipay.jpg-17.7kB][1]![wechat.jpg-16.7kB][2]
+![alipay.jpg-17.7kB][99]![wechat.jpg-16.7kB][98]
 
 
-[1]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
-[2]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+[99]: http://static.zybuluo.com/mikumikulch/6g65s5tsspdmsk87a8ariszo/alipay.jpg
+[98]: http://static.zybuluo.com/mikumikulch/rk5hldgo4wi9fv23xu3vm8pf/wechat.jpg
+
+
+
+
+
+
 
 
 
