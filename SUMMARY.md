@@ -56,6 +56,7 @@
 ## 设计
 
 * [面向工程师的设计指南 - 什么是好的 Web Api 的设计](mian-xiang-gong-cheng-shi-de-she-ji-zhi-nan-shi-yao-shi-hao-de-web-api-de-she-ji.md)
+* [面向工程师的设计指南 - web api 的请求与响应](mian-xiang-gong-cheng-shi-de-she-ji-zhi-nan-web-api-de-qing-qiu-yu-xiang-ying.md)
 
 ## 写点生活
 
