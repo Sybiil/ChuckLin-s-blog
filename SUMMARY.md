@@ -45,13 +45,8 @@
   * [状态设计模式](设计模式/状态设计模式.md)
 * [python](章节/python.md)
   * [Python3.x、urllib、与HTTPCookieProcessor趣事](python/Python3.x、urllib、与HTTPCookieProcessor趣事.md)
+  * [认识与拥抱协程](ren-shi-yu-yong-bao-xie-cheng.md)
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
-* [mysql](章节/mysql.md)
-  * [SQL 常用优化手段总结 - 索引的使用误区](mysql/SQL 常用优化手段总结 - 索引的使用误区.md)
-  * [SQL 常用优化手段总结 - 认识数据库锁](mysql/SQL 常用优化手段总结 - 认识数据库锁.md)
-  * [SQL 常用优化手段总结 - 索引的应用](mysql/SQL 常用优化手段总结 - 索引的应用.md)
-  * [SQL 常用优化手段总结 - 分析 SQL 语句的一般步骤](mysql/SQL 常用优化手段总结 - 分析 SQL 语句的一般步骤.md)
-  * [SQL 常用优化手段总结 - 小技巧](mysql/SQL 常用优化手段总结 - 小技巧 .md)
 
 ## 设计
 
