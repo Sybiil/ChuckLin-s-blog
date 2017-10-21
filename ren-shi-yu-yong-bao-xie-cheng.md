@@ -1,11 +1,23 @@
 # 认识与拥抱协程
 
+标签（空格分隔）：python
+
 ---
 
 ##并发与并行
 计算机自诞生以来，有两方面的性能在持续改进。一是尝试让计算机运行的更快，我们设计了并发使系统具备处理多个任务的能力。二是人类在尝试让计算机做的更多，我们设计了并行使系统可以同时运行多个任务。
 
 > 我们利用术语并发（concurrency）来指一个同时具有多个活动的系统。用并行（parallelism）指代同时运行几个任务使一个系统运行的更快。
+
+Erlang 之父 Joe Armstrong 用一张5岁小孩都能看懂的图解释了并发与并行的区别
+
+
+![v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg-19.2kB][1]
+
+并发就是两个队列的顾客一起去一个窗口买咖啡。并行是两个队列的人分别去两个窗口买咖啡。
+
+并发和串行处理有什么区别？
+并发中的队列里的人一旦买完咖啡后就马上去别的地方等着咖啡煮好，轮到队列中的下一位顾客。而串行处理则是上一位顾客买好咖啡直到咖啡煮好后，才轮到队列中的下一位顾客购买咖啡。
 
 为使并发与并行在计算机中得到广泛的应用，操作系统屏蔽了底层硬件细节，提供了进程与线程两种抽象供开发人员使用，这就是线程的由来。
 线程的概念想必你已经很熟悉了。同一个进程由多个称为线程的执行单元组成，线程们共享一个进程上下文。cpu 在多个线程之间由操作系统调度器进行切换，并保存当前线程状态到寄存器或主存。
@@ -23,27 +35,27 @@
 ```python
 # 生成器函数（消费者）
 def consumer():
-    r = ''
-    while True:
-        # 切换任务到生产者并 yield 结果
-        n = yield r
-        if not n:
-            return
-        print('[CONSUMER] Consuming %s...' % n)
-        r = '200 OK'
+r = ''
+while True:
+# 切换任务到生产者并 yield 结果
+n = yield r
+if not n:
+return
+print('[CONSUMER] Consuming %s...' % n)
+r = '200 OK'
 
 # 生产者
 def produce(c):
-    # 开启生成器
-    c.send(None)
-    n = 0
-    while n < 5:
-        n = n + 1
-        print('[PRODUCER] Producing %s...' % n)
-        # 切换任务到消费者
-        r = c.send(n)
-        print('[PRODUCER] Consumer return: %s' % r)
-    c.close()
+# 开启生成器
+c.send(None)
+n = 0
+while n < 5:
+n = n + 1
+print('[PRODUCER] Producing %s...' % n)
+# 切换任务到消费者
+r = c.send(n)
+print('[PRODUCER] Consumer return: %s' % r)
+c.close()
 
 c = consumer()
 produce(c)
@@ -72,7 +84,9 @@ produce(c)
 
 模型改用协程，生产者生产消息后直接通过 yield 跳转到消费者开始执行，待消费者执行完毕后，切换回生产者继续生产，效率极高。
 
-可见，相比线程，协程实现的并发逻辑具备无锁、轻量级（无上下文切换）、逻辑简单开发快速等特点。在业务场景合适的情况下，没有理由不选择协程。
+可见，协程本质上就是一个线程的异步串行处理。 它和 nodejs 的异步回调在感觉上有些类似。所以，使用协程时要尽量选择与多路复用 IO 模型等非阻塞 IO 模型进行搭配，以发挥异步处理的最大优势。
+
+由此可见，相比线程，协程实现的并发逻辑具备无锁、轻量级（无上下文切换）、逻辑简单开发快速等特点。在业务场景合适的情况下，没有理由不选择协程。
 
 ##更多的业务场景
 到此协程的基本概念应该已经在你的大脑中留下了一些痕迹。接着请允许我再介绍一个协程的经典示例，帮助你让协程在脑海里变得更加清晰牢固。
@@ -82,20 +96,20 @@ produce(c)
 ```lua
 -- 进攻函数
 function punch( ... )
-	for i=1,5 do
-		print('punch' .. i)
-		-- yelid 执行秒数 下次执行位置
-		scheduler.wait(1.0)
-	end
+for i=1,5 do
+print('punch' .. i)
+-- yelid 执行秒数 下次执行位置
+scheduler.wait(1.0)
+end
 end
 
 -- 防守函数
 function block( ... )
-	for i=1,3 do
-		print('block' .. i)
-		-- yelid 执行秒数 下次执行位置
-		scheduler.wait(2.0)
-	end
+for i=1,3 do
+print('block' .. i)
+-- yelid 执行秒数 下次执行位置
+scheduler.wait(2.0)
+end
 
 end
 
@@ -110,9 +124,9 @@ local pending = {}
 
 -- 入队函数
 local function schedule(time,action)
-	pending[#pending + 1] = {
-	time = time,
-	action = action
+pending[#pending + 1] = {
+time = time,
+action = action
 }
 
 -- 按照未来执行时间排序
@@ -122,26 +136,26 @@ end
 
 -- 任务执行出让函数
 local function wait(seconds)
-	coroutine.yield(seconds)
+coroutine.yield(seconds)
 end
 
 -- 主函数
 function run()
-	-- 从队列中获取处理任务
-	while #pending > 0 do
+-- 从队列中获取处理任务
+while #pending > 0 do
 
-		while os.clock() < pending[1].time do end -- busy-wait
+while os.clock() < pending[1].time do end -- busy-wait
 
-		-- 移除任务
-		local item = remove_first(pending)
-		-- 执行生成器
-		local _, seconds = coroutine.resume(item.action)
-		-- 将任务加上生成器 yelid 回来的执行时间，放回待处理队列中
-		if seconds then 
-			later = os.clock() + seconds
-			sschedule(later, item.action)
-		end
-	end
+-- 移除任务
+local item = remove_first(pending)
+-- 执行生成器
+local _, seconds = coroutine.resume(item.action)
+-- 将任务加上生成器 yelid 回来的执行时间，放回待处理队列中
+if seconds then
+later = os.clock() + seconds
+sschedule(later, item.action)
+end
+end
 
 ```
 
@@ -164,3 +178,5 @@ function run()
 
 *[廖雪峰的官网](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432090171191d05dae6e129940518d1d6cf6eeaaa969000)*
 
+
+  [1]: http://static.zybuluo.com/mikumikulch/ewr4jip3mpu1z0pyokxuu46p/v2-674f0d37fca4fac1bd2df28a2b78e633_hd.jpg
