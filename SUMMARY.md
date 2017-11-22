@@ -47,7 +47,8 @@
   * [Python3.x、urllib、与HTTPCookieProcessor趣事](python/Python3.x、urllib、与HTTPCookieProcessor趣事.md)
   * [认识与拥抱协程](ren-shi-yu-yong-bao-xie-cheng.md)
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
-* [有效的单元测试 - 什么是优秀的测试？](test.md)
+* [测试](test.md)
+  * [有效的单元测试 - 什么是优秀的测试？](测试/you-xiao-de-dan-yuan-ce-shi-shi-yao-shi-you-xiu-de-ce-shi-ff1f.md)
 
 ## 设计
 
