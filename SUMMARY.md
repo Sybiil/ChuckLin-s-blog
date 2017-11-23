@@ -49,6 +49,7 @@
   * [基于python3的简单网络爬虫示例](python/基于python3的简单网络爬虫示例.md)
 * [测试](test.md)
   * [有效的单元测试 - 什么是优秀的测试？](测试/you-xiao-de-dan-yuan-ce-shi-shi-yao-shi-you-xiu-de-ce-shi-ff1f.md)
+  * [有效的单元测试 - 单元测试的设计心理学](测试/you-xiao-de-dan-yuan-ce-shi-dan-yuan-ce-shi-de-she-ji-xin-li-xue.md)
 
 ## 设计
 
